@@ -185,3 +185,16 @@ footer {
     color: #64748b;
     font-size: 0.9rem;
 }
+
+.error-msg {
+    color: #f87171; /* Мягкий красный */
+    font-weight: bold;
+}
+
+.success-msg {
+    color: #4ade80; /* Приятный зеленый */
+    background: rgba(74, 222, 128, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #4ade80;
+}

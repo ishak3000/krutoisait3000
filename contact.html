@@ -28,26 +28,29 @@
     </section>
 
     <section class="form-section">
-        <form action="#">
+        <form id="contactForm">
             <div class="form-group">
                 <label for="name">Ваше имя</label>
-                <input type="text" id="name" placeholder="Иван Иванов" required>
+                <input type="text" id="name" placeholder="Иван Иванов">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="example@mail.com" required>
+                <input type="text" id="email" placeholder="example@mail.com">
             </div>
             <div class="form-group">
                 <label for="message">Текст сообщения</label>
-                <textarea id="message" rows="5" placeholder="Опишите вашу задачу..." required></textarea>
+                <textarea id="message" rows="5" placeholder="Опишите вашу задачу..."></textarea>
             </div>
             <button type="submit" class="btn">Отправить запрос</button>
         </form>
+        <!-- Здесь будет появляться ответ -->
+        <div id="formResponse" style="margin-top: 20px;"></div>
     </section>
 </main>
 
 <footer>
     <p>&copy; 2026 CyberGuard Solutions. Все права защищены.</p>
 </footer>
+    <script src="index.js"></script>
 </body>
 </html>
