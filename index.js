@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
     const responseDiv = document.getElementById('formResponse');
 
-    // Проверяем, что форма вообще есть на странице (чтобы не было ошибок на index.html)
     if (!form) return;
 
     form.addEventListener('submit', function(e) {
@@ -25,8 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             responseDiv.innerHTML = '<p class="error-msg">Неверно введен email.</p>';
             return;
         }
-
-        // ВНИМАНИЕ: Тут используются обратные кавычки ` (клавиша Ё)
+        
         const successHtml = `
             <div class="success-msg">
                 <h3>Запрос отправлен!</h3>
