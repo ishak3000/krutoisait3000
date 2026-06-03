@@ -4,15 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!form) return;
 
-    form.addEventListener('submit', async function(e) { // Добавили async
+    form.addEventListener('submit', async function(e) { 
         e.preventDefault();
 
-        // 1. Считываем значения из полей
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
-
-        // 2. Валидация (твой код)
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!name || !email || !message) {
             responseDiv.innerHTML = '<p class="error-msg">Заполните все поля формы.</p>';
@@ -24,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // 3. ОТПРАВКА НА СЕРВЕР (это то, чего не хватало)
         try {
             const response = await fetch('http://158.160.142.81:8083/feedback', {
                 method: 'POST',
@@ -37,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                // Если сервер ответил успешно
                 const successHtml = `
                     <div class="success-msg">
                         <h3>Запрос отправлен!</h3>
